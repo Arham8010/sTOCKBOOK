@@ -222,23 +222,29 @@ const DynamicTable: React.FC<DynamicTableProps> = ({ data, onChange, readOnly })
         )}
       </div>
 
-      {/* Touch-First Floating Controls */}
+      {/* Modern Compact Floating Controls for Mobile */}
       {!readOnly && (
-        <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-[80] flex items-center gap-4 md:hidden">
-          <button 
-            onClick={addRow}
-            className="flex items-center gap-3 px-8 py-5 bg-slate-900 text-white rounded-[1.5rem] shadow-2xl shadow-slate-400 font-black active:scale-[0.92] transition-all"
-          >
-            <Rows size={24} strokeWidth={3} />
-            <span>Add Row</span>
-          </button>
-          <button 
-            onClick={addColumn}
-            className="flex items-center gap-3 px-8 py-5 bg-blue-600 text-white rounded-[1.5rem] shadow-2xl shadow-blue-400 font-black active:scale-[0.92] transition-all"
-          >
-            <Columns size={24} strokeWidth={3} />
-            <span>Add Col</span>
-          </button>
+        <div className="fixed bottom-6 right-6 z-[80] md:hidden">
+          <div className="flex flex-col gap-3 items-end">
+            <div className="bg-slate-900/90 backdrop-blur-xl border border-white/20 p-1.5 rounded-full flex flex-col gap-2 shadow-2xl scale-110">
+               <button 
+                onClick={addColumn}
+                className="w-12 h-12 flex flex-col items-center justify-center bg-slate-800 text-slate-300 rounded-full active:scale-90 transition-all"
+                title="Add Column"
+              >
+                <Columns size={16} />
+                <span className="text-[7px] font-black uppercase tracking-tighter mt-0.5">Col</span>
+              </button>
+              <button 
+                onClick={addRow}
+                className="w-12 h-12 flex flex-col items-center justify-center bg-blue-600 text-white rounded-full active:scale-90 transition-all shadow-lg"
+                title="Add Row"
+              >
+                <Plus size={18} strokeWidth={3} />
+                <span className="text-[7px] font-black uppercase tracking-tighter mt-0.5">Row</span>
+              </button>
+            </div>
+          </div>
         </div>
       )}
 
