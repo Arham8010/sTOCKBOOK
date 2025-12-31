@@ -9,9 +9,9 @@ import {
 } from 'lucide-react';
 import { StockLog, LogSectionType, User, SectionData } from './types';
 import DynamicTable from './components/DynamicTable';
-import { exportLogToPDF, exportSectionToPDF } from './services/pdfService';
-import { exportElementToImage } from './services/imageService';
-import { analyzeStockLog } from './services/geminiService';
+import { exportLogToPDF, exportSectionToPDF } from './pdfService';
+import { exportElementToImage } from './imageService';
+import { analyzeStockLog } from './geminiService';
 
 const EMPTY_SECTION: SectionData = { columns: [{ id: '1', header: 'Item Name' }, { id: '2', header: 'Quantity' }], rows: [] };
 
