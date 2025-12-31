@@ -8,7 +8,7 @@ import {
   ChevronDown, FileDown, Layers, Image as ImageIcon, File as FileIcon
 } from 'lucide-react';
 import { StockLog, LogSectionType, User, SectionData } from './types';
-import DynamicTable from './components/DynamicTable';
+import DynamicTable from './DynamicTable';
 import { exportLogToPDF, exportSectionToPDF } from './pdfService';
 import { exportElementToImage } from './imageService';
 import { analyzeStockLog } from './geminiService';
