@@ -1,5 +1,5 @@
 
-import { StockLog, LogSectionType } from "../types";
+import { StockLog, LogSectionType } from "./types";
 
 // Accessing via window because of the external scripts in index.html
 declare const jspdf: any;
